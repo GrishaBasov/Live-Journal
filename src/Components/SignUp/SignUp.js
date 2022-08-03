@@ -51,6 +51,7 @@ function SignUp({ state, createNewUser }) {
 			<div>
 				<span className={s["input-sign"]}>Username</span>
 				<input
+					placeholder={"Username"}
 					className={usernameInput}
 					{...register("username", {
 						required: "Поле обязательно для заполнения",
@@ -71,6 +72,7 @@ function SignUp({ state, createNewUser }) {
 			<div>
 				<span className={s["input-sign"]}>Email address</span>
 				<input
+					placeholder={"Email address"}
 					className={emailInput}
 					{...register("email", {
 						required: "Поле обязательно для заполнения",
@@ -86,6 +88,7 @@ function SignUp({ state, createNewUser }) {
 			<div>
 				<span className={s["input-sign"]}>Password</span>
 				<input
+					placeholder={"Password"}
 					className={passwordInput}
 					type='password'
 					{...register("password", {
@@ -105,6 +108,7 @@ function SignUp({ state, createNewUser }) {
 			<div>
 				<span className={s["input-sign"]}>Repeat Password</span>
 				<input
+					placeholder={"Repeat Password"}
 					className={passwordRepeat}
 					type='password'
 					{...register("passwordRepeat", {

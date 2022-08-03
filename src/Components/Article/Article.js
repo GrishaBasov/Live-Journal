@@ -29,7 +29,7 @@ function Article({
 	const tags = () => {
 		let id = 0;
 		return data.tagList.map((item) => {
-			if (item.length === 0) {
+			if (item === null) {
 				return null;
 			}
 			return (

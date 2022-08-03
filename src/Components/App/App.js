@@ -40,7 +40,7 @@ function App({ state, getArticle, logIn }) {
 			<div className={moduleDisable} />
 			<Header />
 			<Route path='/'>
-				<Redirect to='/articles/' />
+				{/* <Redirect to='/articles/' /> */}
 			</Route>
 			<Route path='/articles/' exact render={() => <ArticleList />} />
 			<Route
@@ -73,8 +73,12 @@ function App({ state, getArticle, logIn }) {
 			<Route path='/sign-up/' render={() => <SignUp />} />
 			<Route path='/sign-in/' render={() => <SignIn />} />
 			<Route path='/profile/' render={() => <EditProfile />} />
-			<Route path='/new-article/' render={() => <CreateNewArticle />}>
-				{!state.loggedIn && <Redirect to='/sign-in/' />}
+			<Route path='/new-article/' render={() =>{
+				if (state.loggedIn) {
+					return <CreateNewArticle />;
+				}
+				return <Redirect to='/sign-in/' />;
+			} }>
 			</Route>
 		</div>
 	);

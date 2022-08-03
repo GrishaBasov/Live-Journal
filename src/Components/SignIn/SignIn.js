@@ -43,6 +43,7 @@ function SignIn({ state, logIn }) {
 				{/* <input className={s["input-field"]} type="text" /> */}
 				<input
 					className={emailInput}
+					placeholder={"Email address"}
 					{...register("email", {
 						required: "Поле обязательно для заполнения",
 						pattern: {
@@ -56,6 +57,7 @@ function SignIn({ state, logIn }) {
 			<div>
 				<span className={s["input-sign"]}>Password</span>
 				<input
+					placeholder={"Password"}
 					className={passwordInput}
 					type='password'
 					{...register("password", {

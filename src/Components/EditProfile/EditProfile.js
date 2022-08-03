@@ -55,7 +55,7 @@ function EditProfile({ state, editProfile }) {
 				<span className={s["input-sign"]}>Username</span>
 				<input
 					className={usernameInput}
-					placeholder={state.username}
+					defaultValue={state.username}
 					{...register("username", {
 						required: "Поле обязательно для заполнения",
 					})}
@@ -66,7 +66,7 @@ function EditProfile({ state, editProfile }) {
 			<div>
 				<span className={s["input-sign"]}>Email address</span>
 				<input
-					placeholder={state.email}
+					defaultValue={state.email}
 					className={emailInput}
 					{...register("email", {
 						required: "Поле обязательно для заполнения",
@@ -82,6 +82,7 @@ function EditProfile({ state, editProfile }) {
 			<div>
 				<span className={s["input-sign"]}>New password</span>
 				<input
+					placeholder={"New password"}
 					className={passwordInput}
 					type='password'
 					{...register("password", {
@@ -100,7 +101,7 @@ function EditProfile({ state, editProfile }) {
 			<div>
 				<span className={s["input-sign"]}>Avatar image (url)</span>
 				<input
-					placeholder={state.image}
+					placeholder={"Avatar image"}
 					className={urlInput}
 					{...register("url", {
 						pattern: {

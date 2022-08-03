@@ -79,6 +79,7 @@ export const createNewUser = (user) =>
 			localStorage.setItem("password", user.user.password);
 			localStorage.setItem("email", data.user.email);
 			localStorage.setItem("token", data.user.token);
+			history.back();
 			return dispatch(createNewUserAction(data));
 		}
 	};
@@ -102,6 +103,7 @@ export const logIn = (user) =>
 			localStorage.setItem("password", user.user.password);
 			localStorage.setItem("email", data.user.email);
 			localStorage.setItem("token", data.user.token);
+			history.back();
 			return dispatch(logInAction(data));
 		}
 	};

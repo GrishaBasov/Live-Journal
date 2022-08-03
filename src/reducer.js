@@ -68,6 +68,7 @@ const reducer = (
 			email: null,
 			token: null,
 			image: null,
+			errors: null,
 		};
 	} if (action.type === "editProfileAction") {
 		return {
